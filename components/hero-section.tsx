@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 import { Sparkles, Moon, Star } from "lucide-react"
+import Link from "next/link"
 
 export function HeroSection() {
   const [mistParticles, setMistParticles] = useState<number[]>([])
@@ -53,28 +54,6 @@ export function HeroSection() {
         </div>
 
         {/* Central product visual with enhanced styling */}
-        <div className="relative w-80 h-80 mx-auto mb-8 animate-float">
-          <div className="absolute inset-0 bg-gradient-radial from-misty-lilac/30 to-transparent rounded-full blur-2xl" />
-          <img
-            src="/elegant-lavender-candle-and-diffuser-set-on-marble.jpg"
-            alt="Dreamoras candle and diffuser"
-            className="relative w-full h-full object-contain drop-shadow-2xl"
-          />
-          {/* Light particles around product */}
-          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-warm-sand/60 rounded-full animate-shimmer" />
-          <div
-            className="absolute top-1/3 right-1/4 w-3 h-3 bg-misty-lilac/60 rounded-full animate-shimmer"
-            style={{ animationDelay: "1s" }}
-          />
-          <div
-            className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-sage-green/60 rounded-full animate-shimmer"
-            style={{ animationDelay: "2s" }}
-          />
-          <div
-            className="absolute bottom-1/4 right-1/3 w-3 h-3 bg-twilight-lavender/60 rounded-full animate-shimmer"
-            style={{ animationDelay: "3s" }}
-          />
-        </div>
 
         <div className="space-y-4">
           <div className="inline-block px-6 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-misty-lilac/30 text-sm text-midnight-navy font-light mb-4">
@@ -96,19 +75,23 @@ export function HeroSection() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-          <Button
-            size="lg"
-            className="bg-midnight-navy text-pale-cream hover:bg-midnight-navy/90 transition-all duration-300 hover:shadow-lg hover:shadow-misty-lilac/50 px-10 py-7 text-lg group"
-          >
-            <span className="inline-block group-hover:scale-105 transition-transform">Shop Sleep Collection</span>
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-2 border-midnight-navy text-midnight-navy hover:bg-midnight-navy/5 px-10 py-7 text-lg group bg-transparent"
-          >
-            <span className="inline-block group-hover:scale-105 transition-transform">Explore Aromatherapy</span>
-          </Button>
+          <Link href="/sleep-collection">
+            <Button
+              size="lg"
+              className="bg-midnight-navy text-pale-cream hover:bg-midnight-navy/90 transition-all duration-300 hover:shadow-lg hover:shadow-misty-lilac/50 px-10 py-7 text-lg group"
+            >
+              <span className="inline-block group-hover:scale-105 transition-transform">Shop Sleep Collection</span>
+            </Button>
+          </Link>
+          <Link href="/aromatherapy">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-midnight-navy text-midnight-navy hover:bg-midnight-navy/5 px-10 py-7 text-lg group bg-transparent"
+            >
+              <span className="inline-block group-hover:scale-105 transition-transform">Explore Aromatherapy</span>
+            </Button>
+          </Link>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-8 pt-12 text-sm text-midnight-navy/60">
