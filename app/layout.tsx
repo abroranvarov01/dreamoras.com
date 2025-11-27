@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 // <CHANGE> Import Cormorant Garamond for headings and Lato for body text
 import { Cormorant_Garamond, Lato } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const cormorant = Cormorant_Garamond({
@@ -43,7 +42,6 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${cormorant.variable} ${lato.variable} font-sans antialiased`}>
 				{children}
-				<Analytics />
 			</body>
 		</html>
 	)
