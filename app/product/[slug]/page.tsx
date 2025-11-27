@@ -14,11 +14,8 @@ export default function ProductPage() {
 
 	const params = useParams();
 	const slug = params.slug;
-	const product = products.find((p) => p.slug === params.slug) || products[0]
+	const product = products.find((p) => p.slug === params.slug);
 
-	if (!product) {
-		notFound()
-	}
 
 	useEffect(() => {
 		const cookies = Object.fromEntries(
