@@ -16,7 +16,7 @@ const lato = Lato({
 })
 
 // <CHANGE> Updated metadata for Dreamoras branding
-export const metadata: Metadata = {
+export const metadata: any = {
 	title: "Dreamoras | Sleep Deeper. Relax Faster. Breathe Easier.",
 	description:
 		"Discover aromatherapy products that help you create nightly rituals for restorative sleep. Natural aromas + mindful design.",
