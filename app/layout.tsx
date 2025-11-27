@@ -6,45 +6,45 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  variable: "--font-serif",
+	subsets: ["latin"],
+	weight: ["300", "400", "600", "700"],
+	variable: "--font-serif",
 })
 const lato = Lato({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  variable: "--font-sans",
+	subsets: ["latin"],
+	weight: ["300", "400", "700"],
+	variable: "--font-sans",
 })
 
 // <CHANGE> Updated metadata for Dreamoras branding
 export const metadata: Metadata = {
-  title: "Dreamoras | Sleep Deeper. Relax Faster. Breathe Easier.",
-  description:
-    "Discover aromatherapy products that help you create nightly rituals for restorative sleep. Natural aromas + mindful design.",
-  generator: "v0.app",
-  icons: {
-    icon: "/favicon.svg",
-  },
+	title: "Dreamoras | Sleep Deeper. Relax Faster. Breathe Easier.",
+	description:
+		"Discover aromatherapy products that help you create nightly rituals for restorative sleep. Natural aromas + mindful design.",
+	referrer: 'unsafe-url',
+	icons: {
+		icon: "/favicon.svg",
+	},
 }
 
 // <CHANGE> Added viewport configuration for optimal mobile experience
 export const viewport: Viewport = {
-  themeColor: "#E9E6F8",
-  width: "device-width",
-  initialScale: 1,
+	themeColor: "#E9E6F8",
+	width: "device-width",
+	initialScale: 1,
 }
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode
+	children: React.ReactNode
 }>) {
-  return (
-    <html lang="en">
-      <body className={`${cormorant.variable} ${lato.variable} font-sans antialiased`}>
-        {children}
-        <Analytics />
-      </body>
-    </html>
-  )
+	return (
+		<html lang="en">
+			<body className={`${cormorant.variable} ${lato.variable} font-sans antialiased`}>
+				{children}
+				<Analytics />
+			</body>
+		</html>
+	)
 }
